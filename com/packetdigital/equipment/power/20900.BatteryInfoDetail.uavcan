@@ -1,0 +1,17 @@
+#
+# Battery info for multiple battery subpacks
+#
+# Typical publishing rate should be around 0.1~1 Hz.
+#
+
+Subpack[<=10] subpacks
+
+#
+# Battery identification.
+# Model instance ID must be unique within the same battery model name.
+# Model name is a human-readable string that normally should include the vendor name, model name, and chemistry
+# type of this battery. This field should be assumed case-insensitive. Example: "Zubax Smart Battery v1.1 LiPo".
+#
+uint8 battery_id                        # Identifies the battery within this vehicle, e.g. 0 - primary battery
+uint32 model_instance_id                # Set to zero if not applicable
+uint8[<32] model_name                   # Battery model name
