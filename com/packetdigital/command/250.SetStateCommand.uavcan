@@ -9,6 +9,10 @@ uint8 COMMAND_SET_STATE_CHARGE = 3
 uint8 COMMAND_SET_STATE_DISCHARGE = 4
 uint8 command
 
+# If command is COMMAND_SET_STATE_DISCHARGE the discharge_voltage must also be set
+# if command is not COMMAND_SET_STATE_DISCHARGE this discharge_voltage is ignored
+float16 discharge_voltage
+
 ---
 
 uint8 ERROR_OK                  = 0     # Success
