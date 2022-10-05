@@ -4,6 +4,7 @@
 # Typical publishing rate should be around 0.1~1 Hz.
 #
 
+# Battery info and cell voltages for each subpack
 void4
 Subpack[<=10] subpacks
 
