@@ -1,24 +1,19 @@
-#
-#
-#
-
 float32 highest_bat_temp_k
 float32 lowest_bat_temp_k
 float32 highest_current             # amps, positive current - discharging
 float32 lowest_current              # amps, negative current - charging
-float32 amp_hours_in                # always positive
-float32 amp_hours_out               # always positive
 float32[12] highest_cell_voltages   # 0 index is cell 1  - affected by CELL_COUNT
 float32[12] lowest_cell_voltages    # 0 index is cell 1  - affected by CELL_COUNT
 float32 highest_bat_voltage
 float32 lowest_bat_voltage
-uint32 num_i2c_errors
+uint32 over_discharge_count
+uint16 cycle_count
+uint32 num_overtemp_faults
+uint32 num_undertemp_faults
+uint32 num_overvolt_faults
+# there is no num_undervolt_faults, see over_discharge_count instead
 
 
-#   over_discharge_count and cycle_count   are already shown in ardupilot.equipment.power.BatteryInfoAux
-#   https://dronecan.github.io/Specification/7._List_of_standard_data_types/#batteryinfoaux
 
-# todo alext add over_discharge_count and cycle_count  to this can message
 
-#   todo alext set a proper id for this datatype
-#   todo alext: make a parent folder, like /packetdigital/SOME_FOLDER/thisfile
+#   todo alext set a proper id for this datatype, or make sure this one is ok
