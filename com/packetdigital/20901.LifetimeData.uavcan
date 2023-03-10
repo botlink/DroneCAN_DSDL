@@ -1,7 +1,7 @@
 float32 highest_bat_temp_k
 float32 lowest_bat_temp_k
-float32 highest_current             # amps, positive current - discharging
-float32 lowest_current              # amps, negative current - charging
+float32 highest_discharge_current   # amps, always a positive value
+float32 highest_charge_current      # amps, always a positive value
 float32[12] highest_cell_voltages   # 0 index is cell 1  - affected by CELL_COUNT
 float32[12] lowest_cell_voltages    # 0 index is cell 1  - affected by CELL_COUNT
 float32 highest_bat_voltage
