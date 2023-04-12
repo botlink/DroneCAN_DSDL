@@ -7,11 +7,11 @@ float32[12] lowest_cell_voltages    # 0 index is cell 1  - affected by CELL_COUN
 float32 highest_bat_voltage
 float32 lowest_bat_voltage
 uint32 over_discharge_count
-uint16 cycle_count
+uint16 cycle_count  #provided by fuel gauge
 uint32 num_overtemp_faults
 uint32 num_undertemp_faults
 uint32 num_overvolt_faults
-# there is no num_undervolt_faults, see over_discharge_count instead
+uint32 num_undervolt_faults
 
 
 
