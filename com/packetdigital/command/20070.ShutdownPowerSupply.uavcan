@@ -1,0 +1,10 @@
+#
+# Command issued to shut down power supply
+#
+
+#
+# shutdown_command must be set to MAGIC_NUMBER for power supply to shut down.
+#
+uint32 MAGIC_NUMBER = 0xB73AE823
+uint32 shutdown_command
+
