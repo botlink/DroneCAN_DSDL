@@ -11,8 +11,3 @@ uint32 num_overtemp_faults
 uint32 num_undertemp_faults
 uint32 num_overvolt_faults
 uint32 num_undervolt_faults
-
-
-
-
-#   todo alext set a proper id for this datatype, or make sure this one is ok
