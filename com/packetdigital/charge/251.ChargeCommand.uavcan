@@ -1,0 +1,16 @@
+#
+# Service to start or stop charging or discharging operations
+#
+
+
+uint8 COMMAND_STOP                    = 0 # Stop the current charge or discharge early
+uint8 COMMAND_START_CHARGE            = 1 # Charge to full
+uint8 COMMAND_START_DISCHARGE_SHIP    = 2 # Discharge to shipping voltage
+uint8 COMMAND_START_DISCHARGE_STORAGE = 3 # Discharge to storage voltage
+uint8 command
+
+---
+
+uint8 ERROR_OK      = 0   # Success
+uint8 ERROR_UNKNOWN = 255 # Generic error
+uint8 error

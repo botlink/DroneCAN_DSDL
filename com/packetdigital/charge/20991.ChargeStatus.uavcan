@@ -1,0 +1,17 @@
+#
+# The current status of the charge or discharge operation and the requested parameters
+#
+# Positive current values indicate charging, negative indicates discharge.
+# When discharging charge_current will be negative.
+#
+
+uint8 CHARGE_STATUS_IDLE        = 0
+uint8 CHARGE_STATUS_CHARGING    = 1
+uint8 CHARGE_STATUS_DISCHARGING = 2
+uint8 charge_status
+
+float16 charge_voltage # [Volt] Requested charge/discharge voltage
+float16 charge_current # [Amp]  Maximum allowed charge/discharge current
+
+float16 battery_voltage # [Volt] Last measured pack voltage
+float16 battery_current # [Amp]  Last measured pack current
