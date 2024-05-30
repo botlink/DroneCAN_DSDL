@@ -7,6 +7,7 @@ uint8 COMMAND_STOP                    = 0 # Stop the current charge or discharge
 uint8 COMMAND_START_CHARGE            = 1 # Charge to full
 uint8 COMMAND_START_DISCHARGE_SHIP    = 2 # Discharge to shipping voltage
 uint8 COMMAND_START_DISCHARGE_STORAGE = 3 # Discharge to storage voltage
+uint8 COMMAND_DISMISS_FAULT           = 4 # Clear the fault status if able
 uint8 command
 
 ---
