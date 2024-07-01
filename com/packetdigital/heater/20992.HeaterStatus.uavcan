@@ -1,0 +1,11 @@
+#
+# The current status of the battery heater operation
+#
+
+uint8 HEATER_STATUS_IDLE        = 0
+uint8 HEATER_STATUS_HEATING     = 1
+uint8 HEATER_STATUS_FAULT       = 2
+uint8 heater_status
+
+int8 target_temperature                 # [Deg. C] Requested pack temperature
+int8 battery_temperature                # [Deg. C] Last measured pack temperature
