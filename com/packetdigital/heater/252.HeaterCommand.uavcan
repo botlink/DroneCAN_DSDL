@@ -7,6 +7,9 @@ uint8 COMMAND_START_HEATING     = 1 # Enable the battery heater
 uint8 COMMAND_DISMISS_FAULT     = 2 # Clear the fault status if able
 uint8 command
 int8 target_temperature             # [Deg. C] The battery will be heated up to this temperature
+uint8 NO_TIMEOUT                = 0 # The heater will stay on until a STOP command is received,
+                                    # or a FAULT occurs
+uint8 timeout                       # [Minutes] The heater will turn off after this amount of time
 
 ---
 
