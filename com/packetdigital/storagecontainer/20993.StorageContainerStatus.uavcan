@@ -1,0 +1,7 @@
+#
+# The current status of the storage-container
+#
+
+uint8 STORAGE_CONTAINER_STATUS_NORMAL      = 0 # OK to charge/discharge/heat the battery
+uint8 STORAGE_CONTAINER_STATUS_FAULT       = 1 # All battery operations should halt immediately
+uint8 storage_container_status
