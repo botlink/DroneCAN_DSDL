@@ -20,9 +20,9 @@ float32 target_current
 
 # Any combination of termination flags.
 # Each one is a possible detection method for charge/discharge termination.
-TERMINATION_FLAGS_MANUAL         = 1 # Check the measured voltage and current to manually detect charge/discharge termination
-TERMINATION_FLAGS_FULL_CHARGE    = 2 # Charge ends if the fuel gauge sets the "full charge" bit
-TERMINATION_FLAGS_FULLY_BALANCED = 4 # Charge termination delayed if any cells are not balanced
+uint32 TERMINATION_FLAGS_MANUAL         = 1 # Check the measured voltage and current to manually detect charge/discharge termination
+uint32 TERMINATION_FLAGS_FULL_CHARGE    = 2 # Charge ends if the fuel gauge sets the "full charge" bit
+uint32 TERMINATION_FLAGS_FULLY_BALANCED = 4 # Charge termination delayed if any cells are not balanced
 uint32 termination_flags
 
 # Pack voltage must be within this many volts of the requested charge voltage to trigger manual charge termination.
