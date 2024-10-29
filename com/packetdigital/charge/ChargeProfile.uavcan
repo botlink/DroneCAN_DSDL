@@ -13,29 +13,29 @@ float32 target_pack_voltage
 
 # An additional voltage limit in case cells are not balanced. Requested charge or discharge
 # voltage will be limited if not doing so would exceed this threshold.
-float32 cell_voltage_limit;
+float32 cell_voltage_limit
 
 # Maximum allowed charge or discharge current. Polarity doesn't matter, can be positive or negative.
-float32 target_current;
+float32 target_current
 
 # Any combination of termination flags.
 # Each one is a possible detection method for charge/discharge termination.
 TERMINATION_FLAGS_MANUAL         = 1 # Check the measured voltage and current to manually detect charge/discharge termination
 TERMINATION_FLAGS_FULL_CHARGE    = 2 # Charge ends if the fuel gauge sets the "full charge" bit
 TERMINATION_FLAGS_FULLY_BALANCED = 4 # Charge termination delayed if any cells are not balanced
-uint32 termination_flags;
+uint32 termination_flags
 
 # Pack voltage must be within this many volts of the requested charge voltage to trigger manual charge termination.
-float32 termination_voltage_gap;
+float32 termination_voltage_gap
 
 # Current must be less than this many amps to trigger manual charge termination.
-float32 termination_current;
+float32 termination_current
 
 # All other manual charge termination conditions must be met for this many seconds before charging stops.
-uint32 termination_duration_s;
+uint32 termination_duration_s
 
 # Balance any cells with voltage at least this many volts greater than any other cell.
-float32 max_cell_imbalance_voltage;
+float32 max_cell_imbalance_voltage
 
 # Do not balance any cell below this voltage, even if it exceeds the max cell imbalance.
-float32 min_cell_balance_voltage;
+float32 min_cell_balance_voltage
