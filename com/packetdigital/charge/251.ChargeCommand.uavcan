@@ -4,14 +4,28 @@
 
 
 uint8 COMMAND_STOP                    = 0 # Stop the current charge or discharge early
-uint8 COMMAND_START_CHARGE            = 1 # Charge to full
-uint8 COMMAND_START_DISCHARGE_SHIP    = 2 # Discharge to shipping voltage
-uint8 COMMAND_START_DISCHARGE_STORAGE = 3 # Discharge to storage voltage
-uint8 COMMAND_DISMISS_FAULT           = 4 # Clear the fault status if able
+uint8 COMMAND_DISMISS_FAULT           = 1 # Clear the fault status if able
+
+uint8 COMMAND_START_CUSTOM            = 100 # Use a custom charge or discharge settings
+uint8 COMMAND_START_CHARGE            = 101 # Charge to full with default settings
+uint8 COMMAND_START_DISCHARGE_SHIP    = 102 # Discharge to shipping voltage with default settings
+uint8 COMMAND_START_DISCHARGE_STORAGE = 103 # Discharge to storage voltage with default settings
+
+uint8 COMMAND_GET_CHARGE_PROFILE            = 201 # Get the default charge settings
+uint8 COMMAND_GET_DISCHARGE_SHIP_PROFILE    = 202 # Get the default discharge to shipping voltage settings
+uint8 COMMAND_GET_DISCHARGE_STORAGE_PROFILE = 203 # Get the default discharge to storage voltage settings
+
 uint8 command
+
+# If command is COMMAND_START_CUSTOM these settings will be used, else it is ignored
+ChargeProfile custom_profile
 
 ---
 
 uint8 ERROR_OK      = 0   # Success
 uint8 ERROR_UNKNOWN = 255 # Generic error
 uint8 error
+
+# The contents of the charge profile used by a START command or read by a GET command
+ChargeProfile profile
+
