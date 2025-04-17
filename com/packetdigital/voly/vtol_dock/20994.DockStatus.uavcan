@@ -1,0 +1,37 @@
+#
+# Present state and configuration of the dock
+#
+
+uint8 CHARGER_STATUS_IDLE     = 0 # No operation in progress
+uint8 CHARGER_STATUS_CHARGING = 1 # Charging in progress
+uint8 CHARGER_STATUS_FAULT    = 2 # Fault detected
+uint8 starter_charger_status
+uint8 vtol_charger_status
+
+#
+# Current limits configured using the DockChargeCommand
+#
+float32 starter_charge_current_amps
+float32 vtol_charge_current_amps
+
+#
+# The state of various GPIO pins - true = asserted, false = deasserted
+#
+bool gpio_vtol_chg_assert
+bool gpio_vtol_uav_assert
+
+bool gpio_esc_soft_start
+bool gpio_esc_enable
+
+bool gpio_starter_chg_assert
+bool gpio_starter_uav_assert
+
+bool gpio_starter_soft_start
+bool gpio_starter_enable
+
+bool gpio_vtol_fault
+bool gpio_starter_fault
+
+bool gpio_user_button
+bool gpio_en_14v
+bool epio_en_28v
