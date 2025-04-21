@@ -1,0 +1,21 @@
+#
+# Service to start or stop charging operations
+#
+
+uint8 COMMAND_STOP           = 0 # Stop charging
+uint8 COMMAND_CHARGE         = 1 # Start/update charging parameters
+uint8 COMMAND_DISMISS_FAULT  = 2 # Clear any fault status if able
+uint8 command
+
+uint8 BATTERY_SGCU  = 0 # Starter battery
+uint8 BATTERY_VTOL  = 1 # VTOL Pack
+uint8 battery
+
+float32 charge_current_amps # Charge current limit
+
+---
+
+uint8 RESULT_SUCCESS  = 0 # Acknowledgement of command
+uint8 RESULT_ERROR    = 1 # Generic error
+uint8 result
+
