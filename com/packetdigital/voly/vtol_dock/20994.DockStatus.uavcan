@@ -11,8 +11,14 @@ uint8 vtol_charger_status
 #
 # Current limits configured using the DockChargeCommand
 #
-float32 starter_charge_current_amps
-float32 vtol_charge_current_amps
+float32 starter_charger_current_limit_amps
+float32 vtol_charger_current_limit_amps
+
+#
+# Measurements of output current (positive numbers indicate charging batteries)
+#
+float32 starter_charger_output_current_amps
+float32 vtol_charger_output_current_amps
 
 #
 # The state of various GPIO pins - true = asserted, false = deasserted
