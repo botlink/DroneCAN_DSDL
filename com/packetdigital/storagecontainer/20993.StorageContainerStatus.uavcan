@@ -17,3 +17,8 @@ uint8 storage_container_status
 # Temperature inside the storage container
 #
 float16 temperature # [Celsius]
+
+#
+# Output signal from the gas sensor
+#
+float16 gas_sensor_output_voltage # [Volts]
