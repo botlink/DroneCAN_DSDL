@@ -6,10 +6,11 @@
 #
 # If the status is not NORMAL, it is NOT safe to charge or discharge the battery.
 #
-uint8 STORAGE_CONTAINER_STATUS_NORMAL           = 0 # OK to charge/discharge/heat the battery
-uint8 STORAGE_CONTAINER_STATUS_FAULT            = 1 # Generic fault
-uint8 STORAGE_CONTAINER_STATUS_FAULT_OVERTEMP   = 2 # Temperature exceeded maximum safe threshold
-uint8 STORAGE_CONTAINER_STATUS_FAULT_GAS_SENSOR = 3 # Gas sensor has stopped responding
+uint8 STORAGE_CONTAINER_STATUS_NORMAL               = 0 # OK to charge/discharge/heat the battery
+uint8 STORAGE_CONTAINER_STATUS_FAULT                = 1 # Generic fault
+uint8 STORAGE_CONTAINER_STATUS_FAULT_OVERTEMP       = 2 # Temperature exceeded maximum safe threshold
+uint8 STORAGE_CONTAINER_STATUS_FAULT_SENSOR_ERROR   = 3 # Gas sensor itself has malfunctioned
+uint8 STORAGE_CONTAINER_STATUS_FAULT_GAS_DETECTED   = 4 # Battery leak detected
 uint8 storage_container_status
 
 #
