@@ -2,6 +2,9 @@
 # Present state and configuration of the dock
 #
 
+#
+# Charger statuses
+#
 uint8 CHARGER_STATUS_IDLE     = 0 # No operation in progress
 uint8 CHARGER_STATUS_CHARGING = 1 # Charging in progress
 uint8 CHARGER_STATUS_FAULT    = 2 # Fault detected
@@ -15,29 +18,51 @@ float32 starter_charger_current_limit_amps
 float32 vtol_charger_current_limit_amps
 
 #
-# Measurements of output current (positive numbers indicate charging batteries)
+# Measurements of charger output current (positive numbers indicate charging batteries)
 #
 float32 starter_charger_output_current_amps
 float32 vtol_charger_output_current_amps
 
 #
-# The state of various GPIO pins - true = asserted, false = deasserted
+# Measurements of charger output voltage
+#
+float32 starter_charger_output_voltage_volts
+float32 vtol_charger_output_voltage_volts
+
+#
+# Measurement of current flowing to ESCs
+#
+float32 esc_current_amps
+
+
+#
+# GPIO outputs - CHG / UAV PRES pins
 #
 bool gpio_vtol_chg_assert
 bool gpio_vtol_uav_assert
-
-bool gpio_esc_soft_start
-bool gpio_esc_enable
-
 bool gpio_starter_chg_assert
 bool gpio_starter_uav_assert
 
+#
+# GPIO outputs - control signals for FETs for starter battery, ESCs
+#
+bool gpio_esc_soft_start
 bool gpio_starter_soft_start
-bool gpio_starter_enable
 
+#
+# GPIO input - logic signal which control the gate driver for the primary ESC FETs
+#
+bool gpio_esc_enabled
+
+#
+# GPIO inputs - fault signals from charger ICs
+#
 bool gpio_vtol_fault
 bool gpio_starter_fault
 
+#
+# GPIO inputs - signals from SNC
+#
 bool gpio_user_button
 bool gpio_en_14v
-bool epio_en_28v
+bool gpio_en_28v
