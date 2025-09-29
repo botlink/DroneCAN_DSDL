@@ -50,6 +50,11 @@ bool gpio_esc_soft_start
 bool gpio_starter_soft_start
 
 #
+# GPIO input - logic signal which control the gate driver for the primary ESC FETs
+#
+bool gpio_esc_enabled
+
+#
 # GPIO inputs - fault signals from charger ICs
 #
 bool gpio_vtol_fault
@@ -60,4 +65,4 @@ bool gpio_starter_fault
 #
 bool gpio_user_button
 bool gpio_en_14v
-bool epio_en_28v
+bool gpio_en_28v
