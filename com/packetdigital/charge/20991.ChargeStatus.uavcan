@@ -5,10 +5,11 @@
 # When discharging charge_current will be negative.
 #
 
-uint8 CHARGE_STATUS_IDLE        = 0
-uint8 CHARGE_STATUS_CHARGING    = 1
-uint8 CHARGE_STATUS_DISCHARGING = 2
-uint8 CHARGE_STATUS_FAULT       = 3
+uint8 CHARGE_STATUS_IDLE        = 0 # Waiting for charge or discharge command
+uint8 CHARGE_STATUS_CHARGING    = 1 # A charge operation is in progress
+uint8 CHARGE_STATUS_DISCHARGING = 2 # A discharge operation is in progress
+uint8 CHARGE_STATUS_FAULT       = 3 # A fault occured and must be cleared before starting another operation
+uint8 CHARGE_STATUS_STARTING    = 4 # The battery is getting ready to start a charge or discharge operation
 uint8 charge_status
 
 float16 charge_voltage # [Volt] Requested charge/discharge voltage
